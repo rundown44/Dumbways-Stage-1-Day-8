@@ -47,6 +47,32 @@ nav img {
     font-size: 18px;
 }
 
+
+.hamburger-nav {
+    display: none;
+    font-size: 20px;
+}
+
+.hamburger-nav a{
+    color: white;
+    background-color: #111727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#menu {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+/* navbar styling */
+
+
 /* index.html styling */
 
 .main-page {
@@ -108,14 +134,16 @@ nav img {
     left: 15px;
 }
 
-
+.left-content {
+    display: flex;
+    flex-direction: column;
+}
 .right-content {
     width: 350px; 
-    height: auto;
-    border: 1px; 
-    border-style: solid whitesmoke; 
+    border: 1px solid whitesmoke; 
     box-shadow: 0 0 10px rgba(85, 83, 83, 0.904);  background-color:white; 
     border-radius: 2%; 
+    display: flex;
     margin: 0px 80px;
 }
 .card img {
@@ -184,3 +212,67 @@ nav img {
     border-radius: 50%;
     margin: 20px;
 } 
+
+
+/* responsive styling */
+
+@media only screen and (max-width: 600px) {
+/* nav responsive styling  */
+    nav {
+        padding: 0px;
+    }
+    nav img {
+        margin: 0px;
+    }
+
+    .nav-right {
+        padding-right: 80px;
+        display: none;
+    }
+    .nav-right a {
+        margin: 0px;
+    }
+
+    .nav-left ul {
+        padding-left: 50px;
+    }
+
+    #menu {
+        display: block;
+    }
+    .nav-left-hamburger {
+        display: none;
+    }
+    
+    .hamburger-nav{
+        display: none;
+    }
+/* nav responsive styling  */
+
+    .main-page {
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        margin: 10% auto;
+    }
+
+    .welcome {
+        width: 90%;
+        font-size: 90%;
+        margin-bottom: 15px;
+    }
+
+    .right-content {
+        justify-content: center;
+        width: 80%;
+    }
+
+    #socialMedia {
+        justify-content: center;
+        margin: 10%;
+    }
+
+    
+}

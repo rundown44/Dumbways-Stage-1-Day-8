@@ -6,129 +6,146 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/myProject.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Project</title>
     </head>
     <body>
+        <!-- navbar -->
         <nav>
             <div class="nav-left">
                 <ul style="list-style: none;">
                     <li>
                         <a href="index.html"><img src="./assets/img/logo_dumbways.png" alt="logo" id="logo"></a>
                     </li>
-                    <li><a href="index.html" id="home">Home</a></li>
-                    <li ><a href="myProject.html" id="myproject">My Project</a> </li>
+                    <li><a href="index.html" class="nav-left-hamburger">Home</a></li>
+                    <li ><a href="myProject.html" class="nav-left-hamburger" id="my-project">My Project</a> </li>
+                    <li ><a href="testimonial.html" class="nav-left-hamburger">Testimonial</a> </li>
                 </ul>
             </div>
             <div class="nav-right">
                 <a href="contactMe.html">Contact Me</a>
             </div>
+            <div class="nav-right" id="menu">
+                <button onclick="menuHamburgerNav()">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </div>
         </nav>
+            <div class="hamburger-nav" id="hamburger-nav">
+                <a href="index.html" >Home</a>
+                <a href="myProject.html" id="my-project">My Project</a>
+                <a href="contactMe.html">Contact Me</a>
+                <a href="contactMe.html">Testimonial</a>
+            </div>
+        <!-- navbar -->
 
-        <h1> ADD MY PROJECT </h1>
-            <form class="form" onsubmit="getProject(event)">
-                <div class="project">
-                    <label for="project">Project Name</label>
-                    <input type="text" id="project">
+        <h1> ADD YOUR PROJECT </h1>
+        <form class="form" onsubmit="getProject(event)">
+            <div class="project">
+                <label for="project">Project Name</label>
+                <input type="text" id="project">
+            </div>
+
+            <div class="date">
+                <div class="start-date">
+                    <label for="start">Start Date</label>
+                    <input type="date" id="start">
                 </div>
+                <div class="end-date">
+                    <label for="end">End Date</label>
+                    <input type="date" id="end" >
+                </div>
+            </div>
 
-                <div class="date">
-                    <div class="start-date">
-                        <label for="start">Start Date</label>
-                        <input type="date" id="start">
+            <div class="description">
+                <label for="description">Description</label>
+                <textarea id="description"></textarea>
+            </div>
+            
+            <div>
+                <label for="tech">Technologies</label>
+                <div class="tech">
+                    <div>
+                        <input type="checkbox" id="nodejs"> 
+                        <label for="nodejs">Node JS</label>
                     </div>
-                    <div class="end-date">
-                        <label for="end">End Date</label>
-                        <input type="date" id="end" >
+                    <div>
+                        <input type="checkbox" id="nextjs"> 
+                        <label for="nextjs">Next JS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="reactjs"> 
+                        <label for="reactjs">React JS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="typescript"> 
+                        <label for="typescript">TypeScript</label>
                     </div>
                 </div>
+            </div>
 
-                <div class="description">
-                    <label for="description">Description</label>
-                    <textarea id="description"></textarea>
-                </div>
-                
+            <div class="upload">
                 <div>
-                    <label for="tech">Technologies</label>
-                    <div class="tech">
-                        <div>
-                            <input type="checkbox" id="nodejs"> 
-                            <label for="nodejs">Node JS</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="nextjs"> 
-                            <label for="nextjs">Next JS</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="reactjs"> 
-                            <label for="reactjs">React JS</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="typescript"> 
-                            <label for="typescript">TypeScript</label>
-                        </div>
-                    </div>
+                    <label for="upload" >Upload Image</label>
+                </div>    
+                <div class="container">
+                    <input type="file" id="upload">
                 </div>
+                <div>
+                    <img src="./assets/img/paperclip.svg" alt="clip">
+                </div>
+            </div>
 
-                <div class="upload">
-                    <div>
-                        <label for="upload" >Upload Image</label>
-                    </div>    
-                    <div class="container">
-                        <input type="file" id="upload">
-                    </div>
-                    <div>
-                        <img src="./assets/img/paperclip.svg" alt="clip">
-                    </div>
-                </div>
-
-                <div class="button-submit">
-                    <button>Submit</button>
-                </div>
-            </form>  
+            <div class="button-submit">
+                <button>Submit</button>
+            </div>
+        </form>  
 
         <div class="my-project-detail">
             <div class="project-detail-title">
                 <h1> MY PROJECT</h1>
             </div>
-            
-            <div class="project-detail">
-                <div class="inner-project" id="contents">
-                    <div>
-                        <img src="./assets/img/project-img.jpg" alt="project-img">
-                    </div>
-                
-                    <div class="project-title">
-                        <a href="myProjectDetail.html">
-                            <h3>Dumbways Mobile App - 2023</h3> 
-                        </a>
-                    </div>
-
-                    <div class="duration">
-                        <p>Duration : 1 bulan</p> 
-                    </div>
-
-                    <div class="project-desc">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, pariatur sequi.</p>
-                    </div>
-
-                    <div class="logo-tech">
-                            <img src="./assets/img/node.js.png" alt="nodeJS">
-                            <img src="./assets/img/next.js.png" alt="nextJS">
-                            <img src="./assets/img/react.js.png" alt="reactJS">
-                            <img src="assets/img/typescript.png" alt="typescript">
-                    </div>    
+            <div class="flex-style" id="contents">
+                <div class="project-detail">
+                    <div class="inner-project">
+                        <div>
+                            <img src="./assets/img/project-img.jpg" alt="project-img">
+                        </div>
                     
-                    <div class="project-button">
-                        <div class="edit">
-                            <button>edit</button>
+                        <div class="project-title">
+                            <a href="myProjectDetail.html">
+                                <h3>Dumbways Mobile App - 2023</h3> 
+                            </a>
                         </div>
+
+                        <div class="duration">
+                            <p>Duration : 1 bulan</p> 
+                        </div>
+
+                        <div class="project-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, pariatur sequi.</p>
+                        </div>
+
+                        <div class="logo-tech">
+                                <img src="./assets/img/node.js.png" alt="nodeJS">
+                                <img src="./assets/img/next.js.png" alt="nextJS">
+                                <img src="./assets/img/react.js.png" alt="reactJS">
+                                <img src="assets/img/typescript.png" alt="typescript">
+                        </div>    
                         
-                        <div class="delete">
-                            <button>delete</button>
-                        </div>
-                    </div>    
+                        <div class="project-button">
+                            <div class="edit">
+                                <button>edit</button>
+                            </div>
+                            
+                            <div class="delete">
+                                <button>delete</button>
+                            </div>
+                        </div>    
+                    </div>
                 </div>
-            </div>
+            </div > 
         </div>    
     </body>
     <script  src="/assets/js/script.js"></script>

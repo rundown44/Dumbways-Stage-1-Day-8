@@ -11,7 +11,6 @@ nav {
     justify-content: space-between;
     background-color: #eeebeb;
     padding: 0px 40px;
-    margin: 0px 0px;
 }
 
 .nav-left a {
@@ -42,6 +41,31 @@ nav img {
     text-decoration: none;
     font-size: 18px;
 }
+
+
+.hamburger-nav {
+    display: none;
+    font-size: 20px;
+}
+
+.hamburger-nav a{
+    color: white;
+    background-color: #111727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#menu {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+/* navbar styling */
 
 /* MAIN PAGE STYLING */
 
@@ -124,4 +148,38 @@ h1 {
 .project-desc p{
     text-align: justify;
     margin: 50px 120px;
+}
+
+@media only screen and (max-width: 600px) {
+/* nav responsive styling  */
+    nav {
+        padding: 0px;
+    }
+    nav img {
+        margin: 0px;
+    }
+
+    .nav-right {
+        padding-right: 80px;
+        display: none;
+    }
+    .nav-right a {
+        margin: 0px;
+    }
+
+    .nav-left ul {
+        padding-left: 50px;
+    }
+
+    #menu {
+        display: block;
+    }
+    .nav-left-hamburger {
+        display: none;
+    }
+    
+    .hamburger-nav{
+        display: none;
+    }
+/* nav responsive styling  */
 }

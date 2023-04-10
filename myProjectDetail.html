@@ -6,23 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/my-project-detail.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Project Details</title>
     </head>
     <body>
+        <!-- navbar -->
         <nav>
             <div class="nav-left">
                 <ul style="list-style: none;">
                     <li>
                         <a href="index.html"><img src="./assets/img/logo_dumbways.png" alt="logo" id="logo"></a>
                     </li>
-                    <li><a href="index.html" id="home">Home</a></li>
-                    <li ><a href="myProject.html" id="myproject">My Project</a> </li>
+                    <li><a href="index.html" id="home" class="nav-left-hamburger">Home</a></li>
+                    <li ><a href="myProject.html" class="nav-left-hamburger">My Project</a> </li>
+                    <li ><a href="testimonial.html" class="nav-left-hamburger">Testimonial</a> </li>
                 </ul>
             </div>
             <div class="nav-right">
                 <a href="contactMe.html">Contact Me</a>
             </div>
+            <div class="nav-right" id="menu">
+                <button onclick="menuHamburgerNav()">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </div>
         </nav>
+            <div class="hamburger-nav" id="hamburger-nav">
+                <a href="index.html" id="home">Home</a>
+                <a href="myProject.html">My Project</a>
+                <a href="contactMe.html">Contact Me</a>
+                <a href="contactMe.html">Testimonial</a>
+            </div>
+        <!-- navbar -->
     
         <h1> DUMBWAYS MOBILE APP - 2023 </h1>
         <div class="img-text">
@@ -71,4 +87,5 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam optio sit tenetur porro, quod libero architecto vel autem nobis delectus amet temporibus asperiores assumenda similique dignissimos reiciendis. Ipsam cum quibusdam dolore recusandae beatae, dolorem ex. Fugiat exercitationem aliquid esse blanditiis excepturi, ab, placeat totam voluptatem voluptate quibusdam pariatur ipsa velit, rerum commodi! Omnis esse pariatur voluptas aspernatur nesciunt obcaecati, beatae laudantium, facere qui repudiandae libero voluptatem provident ratione dolor quae! Dolorem non quis expedita quidem, assumenda adipisci laudantium distinctio voluptate at culpa minus tempore impedit? Esse, sapiente. Enim accusantium ad corrupti quia perferendis laborum repellat animi porro excepturi magni necessita</p>
         </div>
     </body>
+    <script  src="/assets/js/script.js"></script>
 </html>

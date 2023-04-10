@@ -6,23 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/contactMe.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Connect with Arif</title>
     </head>
     <body>
+        <!-- navbar -->
         <nav>
             <div class="nav-left">
                 <ul style="list-style: none;">
                     <li>
                         <a href="index.html"><img src="./assets/img/logo_dumbways.png" alt="logo" id="logo"></a>
                     </li>
-                    <li><a href="index.html" id="home">Home</a></li>
-                    <li ><a href="myProject.html">My Project</a> </li>
+                    <li><a href="index.html"  class="nav-left-hamburger">Home</a></li>
+                    <li ><a href="myProject.html" class="nav-left-hamburger">My Project</a> </li>
+                    <li ><a href="testimonial.html" class="nav-left-hamburger">Testimonial</a> </li>
                 </ul>
             </div>
-            <div class="nav-right">
+            <div class="nav-right" id="contact-me">
                 <a href="contactMe.html">Contact Me</a>
             </div>
+            <div class="nav-right" id="menu">
+                <button onclick="menuHamburgerNav()">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </div>
         </nav>
+            <div class="hamburger-nav" id="hamburger-nav">
+                <a href="index.html" id="home">Home</a>
+                <a href="myProject.html">My Project</a>
+                <a href="contactMe.html" id="contact-me">Contact Me</a>
+                <a href="contactMe.html">Testimonial</a>
+            </div>
+        <!-- navbar -->
 
         <h1> GET IN TOUCH WITH ARIF AZIZ </h1>
         <form>
@@ -52,7 +68,7 @@
                 <textarea id="message"></textarea>
             </div>
             <div>
-                <button type="button" onclick="getData()">Submit</button>
+                <button type="button" onclick="getData()" class="button-submit">Submit</button>
             </div>
         </form>    
     </body>
