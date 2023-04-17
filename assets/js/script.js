@@ -156,85 +156,102 @@ function menuHamburgerNav() {
 }
 
 
-// function for OOP Concept
-class Testimonial {
-    constructor(img, quotes, name) {
-        this._img = img;
-        this._quotes = quotes;
-        this._name = name;
-    }
+// function for HOF & CALLBACk
 
-    get img() {
-        return this._img;
-    }
+const testimonialDummy = [
+    {
+        name: "Paramore",
+        desc: "Paramore beranggotakan 3 orang.",
+        rating: 1,
+        image: "./assets/img/testimonial1.jpg"
+    },
+    {
+        name: "Twenty One Pilot",
+        desc: "Twenty One Pilot hanya beranggotakan 2 orang.",
+        rating: 2,
+        image: "./assets/img/testimonial2.jpg"
+    },
+    {
+        name: "Fallout Boy",
+        desc: "Fallout Boy hanya beranggotakan 2 orang.",
+        rating: 3,
+        image: "./assets/img/testimonial3.jpg"
+    },
+    {
+        name: "Panic! At The Disco",
+        desc: "Panic! At The Disco bubar tahun ini !",
+        rating: 4,
+        image: "./assets/img/testimonial4.jpg"
+    },
+]
 
-    set img(img) {
-        this._img = img;
-    }
+function showTestimonial() {
+    let testimonialHere = ''
 
-    get quotes() {
-        return this._quotes;
-    }
-
-    set quotes(quotes) {
-        this._quotes = quotes;
-    }
-
-    get name() {
-        return this._name;
-    }
-
-    set name(name) {
-        this._name = name;
-    }
-
-    displayTestimonial() {
-        return `
-        <div class="testimonial-oop" id="testimonial-oop">
+    testimonialDummy.forEach((item) => {
+        testimonialHere += `
+        <div class="testimonial-hof" id="testimonial-hof">
             <div class="testimonial-card">
                 <div class="testimonial-img">
-                    <img src="${this._img}" alt="project-img">
+                    <img src="${item.image}" alt="project-img">
                 </div>
                 <div class="testimonial-desc">
-                    <p>"${this._quotes}"</p> 
+                    <p>"${item.desc}"</p> 
                 </div>
-    
-                <div class="testimonial-name">
-                    <p>- ${this._name}</p> 
+                <div class="testimonial-rating">
+                    <div class="testimonial-name">
+                        <p>- ${item.name}</p> 
+                    </div>
+                    <div>
+                        <p>${item.rating} <i class="fa fa-star"></i></p> 
+                    </div>
                 </div>
             </div>
         </div>`
+    })
+
+    document.getElementById("testimonial-hof").innerHTML = testimonialHere
+}
+showTestimonial()
+
+// filter function
+
+function filterTestimonial(rating) {
+    let testimonialHere = ''
+
+    const dataFiltered = testimonialDummy.filter(function (data) {
+        return data.rating === rating
+    })
+    console.log(dataFiltered)
+
+    if(dataFiltered.length === 0) {
+        testimonialHere = `<h3> DATA NOT FOUND! <br/>BUT I LOVE ALL OF THEM! </h3>`
+    } else {
+        dataFiltered.forEach((data) => {
+            testimonialHere += `
+            <div class="testimonial-oop" id="testimonial-oop">
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="${data.image}" alt="project-img">
+                    </div>
+                    <div class="testimonial-desc">
+                        <p>"${data.desc}"</p> 
+                    </div>
+                    <div class="testimonial-rating">
+                        <div class="testimonial-name">
+                            <p>- ${data.name}</p> 
+                        </div>
+                        <div>
+                            <p>${data.rating} <i class="fa fa-star"></i></p> 
+                        </div>
+                    </div>
+                </div>
+            </div>`
+        })
     }
-};
 
-const testimonial1 = new Testimonial (
-    "./assets/img/testimonial1.jpg",
-    "Paramore beranggotakan 3 orang.",
-    "Pakar musik Indonesia"
-);
-
-const testimonial2 = new Testimonial (
-    "./assets/img/testimonial2.jpg",
-    "Twenty One Pilot hanya beranggotakan 2 orang.",
-    "Pakar Musik Amerika"
-);
-
-const testimonial3 = new Testimonial (
-    "./assets/img/testimonial3.jpg",
-    "Fallout Boy Beranggotakan 2 orang.",
-    "Pakar musik Britania Raya"
-);
-
-let testimonials = [testimonial1,testimonial2,testimonial3];
-
-let testimonialOOP = document.getElementById("testimonial-oop");
-
-for (let i = 0; i < testimonials.length; i++) {
-    testimonialOOP.innerHTML += testimonials[i].displayTestimonial();
-};
-  
-
-
+    document.getElementById("testimonial-hof").innerHTML = testimonialHere
+}
 
 
 // part upgrade

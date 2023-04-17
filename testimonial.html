@@ -30,7 +30,7 @@
             <button onclick="menuHamburgerNav()">
               <i class="fa-solid fa-bars"></i>
             </button>
-          </div>
+        </div>
     </nav>
         <div class="hamburger-nav" id="hamburger-nav">
             <a href="index.html">Home</a>
@@ -43,24 +43,37 @@
         <div class="testimonial-title">
             <h1> MY TESTIMONIAL</h1>
         </div>
-        <div class="testimonial-oop" id="testimonial-oop">
-            <!-- <div class="testimonial-card">
-                <div class="testimonial-img">
-                    <img src="./assets/img/Potrait.JPG" alt="project-img">
-                </div>
-            
-                <div class="testimonial-desc">
-                        <p>"Testimoni nanti disini"</p> 
-                    </a>
-                </div>
-    
-                <div class="testimonial-name">
-                    <p>- Nama disini</p> 
-                </div> -->
-            </div>
+
+        <div class="rating">
+            <ul>
+                <li><button onclick="showTestimonial()">ALL</button></li>
+                <li>
+                    <button onclick="filterTestimonial(1)">
+                    1 <i class="fa fa-star"></i>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="filterTestimonial(2)">
+                    2 <i class="fa fa-star"></i>
+                    </button></li>
+                <li>
+                    <button onclick="filterTestimonial(3)">
+                    3 <i class="fa fa-star"></i>
+                    </button></li>
+                <li>
+                    <button onclick="filterTestimonial(4)">
+                    4 <i class="fa fa-star"></i>
+                    </button></li>
+                <li>
+                    <button onclick="filterTestimonial(5)"> 
+                    5 <i class="fa fa-star"></i>
+                    </button></li>
+            </ul>
         </div>
-        
-    </div>    
+        <div class="testimonial-hof" id="testimonial-hof">
+            <!-- OOP IN HERE -->
+        </div>
+    </div>   
 </body>
 <script src="/assets/js/script.js"></script>
 </html>
